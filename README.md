@@ -27,3 +27,7 @@ Jalankan perintah berikut di terminal dari root folder proyek:
 ```bash
 streamlit run dashboard/dashboard.py
 ```
+
+## Live Demo
+
+Repositori ini terhubung dengan Streamlit Community Cloud. Anda bisa mengakses live demo di [pranala ini](https://beijing-air-quality-analysis-athaya.streamlit.app/).
