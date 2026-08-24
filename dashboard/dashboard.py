@@ -142,7 +142,10 @@ with col_right:
     
     # Mengatur ukuran figure barplot dan merapikan margin
     fig_cat, ax_cat = plt.subplots(figsize=(6, 5))
-    colors = ['#2ecc71', '#f1c40f', '#e67e22', '#e74c3c']
+    
+    # Menerapkan prinsip visualisasi: Warna menonjol (biru tua) pada kategori tertinggi 'Baik',
+    # dan warna netral (abu-abu terang) pada kategori lainnya.
+    colors = ['#1f77b4', '#cbd5e1', '#cbd5e1', '#cbd5e1']
     
     bars = ax_cat.bar(cat_counts.index, cat_counts.values, color=colors)
     ax_cat.set_ylabel('Jumlah Jam Observasi', fontsize=10)
