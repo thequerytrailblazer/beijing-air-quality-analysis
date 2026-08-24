@@ -172,5 +172,5 @@ with col_right:
 st.divider()
 st.caption(
     "Data diperoleh dari repositori GitHub [HTI (marceloreis/HTI)](https://github.com/marceloreis/HTI) "
-    "berlisensi GPL 3.0 | Copyright © 2026 - Hisyam Athaya"
+    "berlisensi GPL 3.0 | Copyright © 2026 - HA - The Query Trailblazer"
 )
