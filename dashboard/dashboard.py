@@ -39,12 +39,18 @@ st.sidebar.title("Filter Dashboard")
 min_date = main_df['datetime'].dt.date.min()
 max_date = main_df['datetime'].dt.date.max()
 
-start_date, end_date = st.sidebar.date_input(
-    label='Rentang Waktu',
-    min_value=min_date,
-    max_value=max_date,
-    value=[min_date, max_date]
-)
+try:
+    # Meminta input rentang tanggal dari pengguna
+    start_date, end_date = st.sidebar.date_input(
+        label='Rentang Waktu',
+        min_value=min_date,
+        max_value=max_date,
+        value=[min_date, max_date]
+    )
+except ValueError:
+    # Jika pengguna baru memilih tanggal awal (belum lengkap 2 tanggal)
+    st.sidebar.warning("Silakan pilih rentang tanggal lengkap (tanggal mulai dan tanggal akhir).")
+    st.stop()  # Menghentikan eksekusi sementara agar tidak error traceback
 
 # Filter Stasiun Pemantau
 station_list = ['Semua Stasiun'] + list(main_df['station'].unique())
